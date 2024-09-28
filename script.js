@@ -2,9 +2,6 @@ const countryContainer = document.querySelector(".country-container");
 const searchContainer=document.querySelector(".search-container input");
 const themeChanger=document.querySelector(".theme-changer");
 let allCountry;
-// const cardImg=document.createElement('img');
-// cardImg.src="https://flagcdn.com/sv.svg";
-// countryCard.append(cardImg);
 
 fetch('https://restcountries.com/v3.1/all')
     .then((res) => res.json())
@@ -19,7 +16,7 @@ function renderCountries(data){
         const countryCard = document.createElement('a');
         countryCard.classList.add('country-card');
         countryCard.href=`
-        /country.html?name=${country.name.common}`
+        /REST-Country-guide/country.html?name=${country.name.common}`
         const cardHTML = `
                  <img src=${country.flags.svg} alt="${country.name.common}">
                     <div class="card-text">

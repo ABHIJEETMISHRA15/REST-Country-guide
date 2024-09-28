@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    --background-color:#F6F5F2;
+    --textcolor:black;
+    --elementcolor:white;
+    margin:0;
+    background-color: var(--background-color);
+    color: var(--textcolor);
+}
+body.dark{
+    --background-color: hsl(207, 26%, 17%);
+    --textcolor:white;
+    --elementcolor:hsl(209, 23%, 22%);
+}
+.main-container{
+    max-width: 1200px;
+    margin-inline:auto;
+    margin-top: 32px;
+}
+.header-container{
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+    padding-inline: 24px;
+    background-color: var(--elementcolor);
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto;   
+}
+.theme-changer{
+    cursor: pointer;
+}
+.main{
+   padding: 24px;
+}
+
+a{
+    text-decoration-line: none;
+    color: inherit;
+}
+
+.back-btn{
+    padding: 6px 24px;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    margin-left: 32px;
+    cursor: pointer;
+    background-color: var(--elementcolor);
+}
+
+.country-details{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-top: 32px;
+}
+.country-details img {
+    margin-left: 32px;
+    width: 40%;
+}
+
+.details-text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    column-gap: 64px;
+    flex-wrap: wrap;
+    max-height: 130px;
+
+}
+.details-text p{
+    margin: 0;
+}
+
+.border-countries{
+    margin-top: 48px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.border-countries a{
+    padding: 4px 16px;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    margin-inline: 4px;
+    font-size: 14px;
+}
+@media(max-width:900px){
+    .back-btn{
+        padding: 6px 12px;
+        margin: 32px;
+        font-size: 12px;
+    }
+    .country-details{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 32px;
+        gap: 16px;
+    }
+
+    .details-text{
+        max-height: unset;
+    }
+
+    .country-details img{
+        width: 80%;
+        max-width: 400px;
+        margin-left: 0;
+    }
+    .title{
+        font-size: 16px;
+    }
+    .title p{
+        font-size: 12px;
+    }
+}
